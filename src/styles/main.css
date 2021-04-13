@@ -1,0 +1,82 @@
+@import '~normalize.css';
+@import 'font-roboto.css';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#puzzle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  margin: 0;
+  padding: 0px;
+  width: 100%;
+  border: 5px solid gray;
+  position: relative;
+  background-color: grey;
+  padding-bottom: 100%;
+}
+
+.fragment {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  border: 2px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.1);
+  background-color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.empty {
+  opacity: 0;
+}
+
+.hide {
+  display: none;
+}
+
+p {
+  height: 30px;
+}
+
+input {
+  margin: 5px 20px 5px 5px;
+}
+
+label {
+  margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .fragment {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .fragment {
+    font-size: 1rem;
+  }
+}
